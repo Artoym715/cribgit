@@ -1,0 +1,2915 @@
+<!-- Flexbox 
+Сайт шпаргалка 
+Создатель Grizly
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Шпаргалка по Flexbox</title>
+	<!-- icon -->
+	<link rel="shortcut icon" href="img/grizly.ico" type="image/x-icon">
+	<!-- icon -->
+	<!-- CSS -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS -->
+</head>
+
+<body>
+	<!-- scroll-up  -->
+	<div class="scroll-up d-none d-sm-none d-md-none d-lg-block">
+		<svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+			<path class="scroll-up__svg-path" d="
+			M24,0
+			a24,24 0 0,1 0,48
+			a24,24 0 0,1 0,-48
+			" />
+		</svg>
+	</div>
+	<!-- scroll-up  -->
+	<header class="container-fluid header">
+		<div class="row align-items-start">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<!-- меню -->
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-dark header">
+						<a class="navbar-brand header__logo" href="/">
+							<img src="/img/Grizly3.svg" width="35" height="35" class="d-inline-block align-top"
+								alt="logo" loading="lazy">
+							Grizly
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+							aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="/position.html"
+										target="blank"><i class="fas fa-link"></i> Position</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="/flexbox.html"
+										target="blank"><i class="fas fa-link"></i>Flexbox</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav"
+										href="https://grizly715.github.io/Links/" target="blank"><i
+											class="fas fa-link"></i> Полезные ссылки</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- меню -->
+			</div>
+		</div>
+	</header>
+	<main class="container mb-5">
+		<section class="row">
+			<div class="col-md-12">
+				<h1 class="header__h1">Шпаргалка по Flexbox</h1>
+				<h3 class="section__h2">Полезные ссылки</h3>
+				<a href="https://flexboxfroggy.com/">Игра-тренажер Flexbox Froggy</a>
+			</div>
+		</section><br />
+		<section class="row">
+			<div class="col-md-12">
+				<h2 class="header__h1">Свойства FLEX - контейнера. Применяются для flex-контейнера, обертки
+					flex-элементов</h2>
+				<!-- Аккордион начало -->
+				<div class="accordion" id="accordionExample">
+					<!-- 1 аккордион -->
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Свойство display со значениями flex/inline-flex(Определяет flex-контейнер, блочный
+									или строчный зависит от переданного значения. Преобразовывает все свои прямые,
+									дочерние элементы во flex-элементы.)
+								</button>
+							</h5>
+						</div>
+
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+							data-parent="#accordionExample">
+							<div class="card-body">
+								<!-- 1 табы -->
+								<nav>
+									<div class="nav nav-tabs" id="nav-tab" role="tablist">
+										<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+											href="#nav-static" role="tab" aria-controls="nav-static"
+											aria-selected="true">block / inline* (по умолчанию)<br />
+											*зависит от тега</a>
+										<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+											href="#nav-relative" role="tab" aria-controls="nav-relative"
+											aria-selected="false">flex</a>
+										<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+											href="#nav-relative2" role="tab" aria-controls="nav-relative2"
+											aria-selected="false">inline-flex</a>
+										<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+											href="#nav-absolute" role="tab" aria-controls="nav-absolute"
+											aria-selected="false">inline-flex<br />
+											+ text-align: center; у родителя</a>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent">
+									<div class="tab-pane fade show active" id="nav-static" role="tabpanel"
+										aria-labelledby="nav-home-tab">
+										<div class="position overflow-auto">
+											<!--  parent -->
+											<div class="block">
+												<!--  flex-container  -->
+												<div class="block__row">
+													<!--  flex-element  -->
+													<div class="block__element block__element_1">
+														<!--  content  -->
+														<div class="block__content">1</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_2">
+														<!--  content  -->
+														<div class="block__content">2</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_3">
+														<!--  content  -->
+														<div class="block__content">3</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_4">
+														<!--  content  -->
+														<div class="block__content">4</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											/* родитель */<br />
+											.block{<br />
+											}<br />
+											.block__row{<br />
+											border: 10px solid #ece89d;<br />
+											}<br />
+											.block__element{<br />
+											border: 5px solid #5e5373;<br />
+											}<br />
+											/* контент */<br />
+											.block__content{<br />
+											background-color: #18b5a4;<br />
+											/* плюс прочие стили для текста, отступы */<br />
+											}
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-relative" role="tabpanel"
+										aria-labelledby="nav-relative-tab">
+										<div class="position2 overflow-auto">
+											<!--  parent -->
+											<div class="block">
+												<!--  flex-container  -->
+												<div class="block__row2">
+													<!--  flex-element  -->
+													<div class="block__element block__element_1">
+														<!--  content  -->
+														<div class="block__content">1</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_2">
+														<!--  content  -->
+														<div class="block__content">2</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_3">
+														<!--  content  -->
+														<div class="block__content">3</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_4">
+														<!--  content  -->
+														<div class="block__content">4</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<p>Определяет блочный flex-контейнер. Преобразовывает все свои прямые, дочерние
+											элементы во flex-элементы.</p>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											/* родитель */<br />
+											.block{<br />
+											}<br />
+											/* flex-контейнер */<br />
+											.block__row{<br />
+											border: 10px solid #ece89d;<br />
+											display: flex;<br />
+											}<br />
+											/* flex-элемент */<br />
+											.block__element{<br />
+											border: 5px solid #5e5373;<br />
+											}<br />
+											/* контент */<br />
+											.block__content{<br />
+											background-color: #18b5a4;<br />
+											/* плюс прочие стили для текста, отступы */<br />
+											}
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-relative2" role="tabpanel"
+										aria-labelledby="nav-relative2-tab">
+										<div class="position3 overflow-auto">
+											<!--  parent -->
+											<div class="block">
+												<!--  flex-container  -->
+												<div class="block__row3">
+													<!--  flex-element  -->
+													<div class="block__element block__element_1">
+														<!--  content  -->
+														<div class="block__content">1</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_2">
+														<!--  content  -->
+														<div class="block__content">2</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_3">
+														<!--  content  -->
+														<div class="block__content">3</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_4">
+														<!--  content  -->
+														<div class="block__content">4</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<p>Определяет строчный flex-контейнер. Преобразовывает все свои прямые, дочерние
+											элементы во flex-элементы.</p>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											/* родитель */<br />
+											.block{<br />
+											}<br />
+											/* flex-контейнер */<br />
+											.block__row{<br />
+											border: 10px solid #ece89d;<br />
+											display: inline-flex;<br />
+											}<br />
+											/* flex-элемент */<br />
+											.block__element{<br />
+											border: 5px solid #5e5373;<br />
+											}<br />
+											/* контент */<br />
+											.block__content{<br />
+											background-color: #18b5a4;<br />
+											/* плюс прочие стили для текста, отступы */<br />
+											}
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-absolute" role="tabpanel"
+										aria-labelledby="nav-absolute-tab">
+										<div class="position4 overflow-auto">
+											<!--  parent -->
+											<div class="block2">
+												<!--  flex-container  -->
+												<div class="block__row4">
+													<!--  flex-element  -->
+													<div class="block__element block__element_1">
+														<!--  content  -->
+														<div class="block__content">1</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_2">
+														<!--  content  -->
+														<div class="block__content">2</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_3">
+														<!--  content  -->
+														<div class="block__content">3</div>
+													</div>
+													<!--  flex-element  -->
+													<div class="block__element block__element_4">
+														<!--  content  -->
+														<div class="block__content">4</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<p>Определяет строчный flex-контейнер. Преобразовывает все свои прямые, дочерние
+											элементы во flex-элементы.</p>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											/* родитель */<br />
+											.block{<br />
+											text-align: center;<br />
+											}<br />
+											/* flex-контейнер */<br />
+											.block__row{<br />
+											border: 10px solid #ece89d;<br />
+											display: inline-flex;<br />
+											}
+											/* flex-элемент */<br />
+											.block__element{<br />
+											border: 5px solid #5e5373;<br />
+											}<br />
+											/* контент */<br />
+											.block__content{<br />
+											background-color: #18b5a4;<br />
+											/* плюс прочие стили для текста, отступы */<br />
+											}
+										</div>
+									</div>
+								</div>
+								<!-- 1 табы конец -->
+							</div>
+						</div>
+					</div>
+					<!-- 1 аккордион конец -->
+				</div>
+				<!-- Аккордион конец -->
+				<!-- 2 аккордион -->
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Свойство flex-wrap(Определяет смогут ли flex-элементы перемещаться на следующие строки
+								когда перестают помещаться внутри flex-контейнера.)
+							</button>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 2 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundImg" role="tab" aria-controls="nav-backgroundImg"
+										aria-selected="true">nowrap (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundImg2" role="tab" aria-controls="nav-backgroundImg2"
+										aria-selected="false">wrap</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundImg3" role="tab" aria-controls="nav-backgroundImg3"
+										aria-selected="false">wrap-reverse</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundImg" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row5">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Значение по умолчанию (не нужно указывать). Flex-элементы не смогут перемещаться
+										на следующие строки flex-контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										width: 170px;<br />
+										flex-wrap:nowrap;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundImg2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row6">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы смогут перемещаться на следующие строки flex-контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										width: 170px;<br />
+										flex-wrap:wrap;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundImg3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row7">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы смогут перемещаться на следующие строки flex-контейнера, но в
+										обратном порядке.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										width: 170px;<br />
+										flex-wrap:wrap-reverse;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 2 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 2 аккордион конец -->
+				<!-- 3 аккордион -->
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Свойство flex-direction(Устанавливает основную ось, таким образом определяет направление
+								flex-элементов расположенных в flex-контейнере.)
+							</button>
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 3 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundRepeat" role="tab" aria-controls="nav-backgroundRepeat"
+										aria-selected="true">row (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundRepeat2" role="tab" aria-controls="nav-backgroundRepeat2"
+										aria-selected="false">row-reverse</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundRepeat3" role="tab" aria-controls="nav-backgroundRepeat3"
+										aria-selected="false">column</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundRepeat4" role="tab" aria-controls="nav-backgroundRepeat4"
+										aria-selected="false">column-reverse</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundRepeat" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row8">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Значение по умолчанию (не нужно указывать). Основная ось горизонтальная. Все
+										flex-элементы расположатся слева направо по горизонтали.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										flex-direction:row;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundRepeat2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row9">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Все flex-элементы расположатся справа налево по горизонтали.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										flex-direction: row-reverse;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundRepeat3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row10">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Основная ось сменится с горизонтальной на вертикальную. Все flex-элементы
+										расположатся сверху вниз.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										flex-direction: column;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundRepeat4" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row11">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Основная ось сменится с горизонтальной на вертикальную. Все flex-элементы
+										расположатся снизу вверх.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										flex-direction: column-reverse;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 3 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 3 аккордион конец -->
+				<p>Существует еще свойство flex-flow. Это сокращение для свойств flex-direction и
+					flex-wrap, которые
+					вместе определяют основную и поперечные ось и возможность перемещаться по строкам. По умолчанию row
+					nowrap.</p>
+				<!-- 4 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+								Свойство justify-content(Определяет выравнивание вдоль основной оси (направление зависит
+								от значения свойства flex-direction).
+								)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 4 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundPosition" role="tab" aria-controls="nav-backgroundPosition"
+										aria-selected="true">flex-start (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundPosition2" role="tab"
+										aria-controls="nav-backgroundPosition2" aria-selected="false">flex-end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundPosition3" role="tab"
+										aria-controls="nav-backgroundPosition3" aria-selected="false">center</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundPosition4" role="tab"
+										aria-controls="nav-backgroundPosition4" aria-selected="false">space-between</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundPosition5" role="tab" aria-controls="nav-backgroundRepeat5"
+										aria-selected="false">space-around</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundPosition6" role="tab" aria-controls="nav-backgroundRepeat6"
+										aria-selected="false">space-evenly</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundPosition" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row12">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Значение по умолчанию (не нужно указывать). Flex-элементы прижимаются к началу
+										основной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content:flex-start;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundPosition2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row13">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы прижимаются к концу основной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content:flex-end;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundPosition3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row14">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются по центру основной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content: center;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundPosition4" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row15">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются равномерно по основной оси. Первый элемент находится
+										в начале оси, последний элемент находится в конце оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content: space-between;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundPosition5" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row16">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются равномерно по основной оси .К каждому flex-элементу
+										добавляется пространство слева и справа.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content: space-around;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundPosition6" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row17">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются равномерно по основной оси с одинаковым пространством
+										вокруг них.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										justify-content: space-evenly;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 4 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 4 аккордион конец -->
+				<!-- 5 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingFive">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+								Свойство align-items(Определяет выравнивание вдоль поперечной оси (направление зависит
+								от значения свойства flex-direction).)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 5 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundAttachment" role="tab"
+										aria-controls="nav-backgroundAttachment" aria-selected="true">stretch (по
+										умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundAttachment2" role="tab"
+										aria-controls="nav-backgroundAttachment2" aria-selected="false">flex-start</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundAttachment3" role="tab"
+										aria-controls="nav-backgroundAttachment3" aria-selected="false">flex-end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundAttachment4" role="tab"
+										aria-controls="nav-backgroundAttachment4" aria-selected="false">center</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundAttachment5" role="tab"
+										aria-controls="nav-backgroundAttachment5" aria-selected="false">baseline</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundAttachment" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row18">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Значение по умолчанию (не нужно указывать). Flex-элементы растягиваются на весь
+										размер поперечной оси flex-контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										height:150px;<br />
+										align-items:stretch;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundAttachment2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row19">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы прижимаются к началу поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										height:150px;<br />
+										align-items:flex-start;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundAttachment3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row20">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы прижимаются к концу поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										height:150px;<br />
+										align-items:flex-end;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundAttachment4" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row21">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются по центру поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										height:150px;<br />
+										align-items:center;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundAttachment5" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!--  parent -->
+										<div class="block">
+											<!--  flex-container  -->
+											<div class="block__row22">
+												<!--  flex-element  -->
+												<div class="block__element block__element_1">
+													<!--  content  -->
+													<div class="block__content">1</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_2">
+													<!--  content  -->
+													<div class="block__content">2</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_3">
+													<!--  content  -->
+													<div class="block__content">3</div>
+												</div>
+												<!--  flex-element  -->
+												<div class="block__element block__element_4">
+													<!--  content  -->
+													<div class="block__content">4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Flex-элементы располагаются по базовой линии.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										height:150px;<br />
+										align-items:baseline;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 5 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 5 аккордион конец -->
+				<h2 class="header__h1">Свойства FLEX - элементов. Применяются для flex-элемента, дочернего объекта
+					flex-контейнера</h2>
+
+				<!-- 6 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingSix">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix"
+								aria-expanded="true" aria-controls="collapseSix">
+								Свойство order(Управляет порядком, в котором располагаются flex-элементы внутри
+								flex-контейнера..)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 6 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundSize" role="tab" aria-controls="nav-backgroundSize"
+										aria-selected="true">По умолчанию</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundSize2" role="tab" aria-controls="nav-backgroundSize2"
+										aria-selected="false">4 2 1 3</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundSize3" role="tab" aria-controls="nav-backgroundSize3"
+										aria-selected="false">2 3 4 1</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundSize" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row23">
+											<!--  flex-element  -->
+											<div class="block__element block__element_1">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_2">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_3">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_4">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать).</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										order:1;<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										order:2;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										order:3;<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										order:4;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundSize2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row23">
+											<!--  flex-element  -->
+											<div class="block__element block__element_11">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_22">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_33">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_44">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										order:3;<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										order:2;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_4{<br />
+										order:3;<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_1{<br />
+										order:4;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundSize3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row23">
+											<!--  flex-element  -->
+											<div class="block__element block__element_15">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_26">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_37">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_48">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display:flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										order: 4;<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										order: 1;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_4{<br />
+										order: 2;<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_1{<br />
+										order: 3;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 6 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 6 аккордион конец  -->
+				<!-- 7 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingEight">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+								Свойство align-self(ереопределяет для конкретного flex-элемента выравнивание вдоль
+								поперечной оси (направление зависит от значения свойства flex-direction). На примере
+								flex-элементов №2 и №4.)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 7 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-backgroundFewPictures" role="tab"
+										aria-controls="nav-backgroundFewPictures" aria-selected="true">auto (по
+										умолчанию)<br />как у flex-контейнера</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-backgroundFewPictures2" role="tab"
+										aria-controls="nav-backgroundFewPictures2" aria-selected="false">flex-start</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundFewPictures3" role="tab"
+										aria-controls="nav-backgroundFewPictures3" aria-selected="false">flex-end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-backgroundFewPictures4" role="tab"
+										aria-controls="nav-backgroundFewPictures4" aria-selected="false">center</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-backgroundFewPictures" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row24">
+											<!--  flex-element  -->
+											<div class="block__element block__element_19">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_220">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_321">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_423">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать). Flex-элементы растягиваются на весь
+										размер поперечной оси flex-контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										height: 150px;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										/* наследует align-items:stretch; */<br />
+										align-self: auto;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										/* наследует align-items:stretch; */<br />
+										align-self: auto;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundFewPictures2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row24">
+											<!--  flex-element  -->
+											<div class="block__element block__element_224">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_225">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_326">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_427">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элементы прижимаются к началу поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										height: 150px;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										align-self: flex-start;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										align-self: flex-start;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundFewPictures3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row24">
+											<!--  flex-element  -->
+											<div class="block__element block__element_228">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_229">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_330">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_431">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элементы прижимаются к концу поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										height: 150px;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										align-self: flex-end;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										align-self: flex-end;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-backgroundFewPictures4" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row24">
+											<!--  flex-element  -->
+											<div class="block__element block__element_232">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_233">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_334">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_435">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элементы располагаются по центру поперечной оси.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										height: 150px;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										align-self: center;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										align-self: center;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 7 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 7 аккордион конец  -->
+				<!-- 8 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingSeven">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+								Свойство flex-basis(Определяет размер элемента по умолчанию, до распределения
+								оставшегося пространства. Значения могут быть в процентах пикселях и т.д. На примере
+								flex-элементов №2 и №4.)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 8 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-FlexBasis" role="tab" aria-controls="nav-FlexBasis"
+										aria-selected="true">Auto (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-FlexBasis2" role="tab" aria-controls="nav-FlexBasis2"
+										aria-selected="false">Значение в пикселях</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-FlexBasis3" role="tab" aria-controls="nav-FlexBasis3"
+										aria-selected="false">Значение в процентах</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-FlexBasis" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row25">
+											<!--  flex-element  -->
+											<div class="block__element block__element_236">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_237">
+												<!--  content  -->
+												<div class="block__content">2 flex-element</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_338">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_439">
+												<!--  content  -->
+												<div class="block__content">4 flex-element</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать). Flex-элемент будет занимать размер в
+										зависимости от контента внутри него.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-basis: auto;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-basis: auto;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-FlexBasis2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row25">
+											<!--  flex-element  -->
+											<div class="block__element block__element_240">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_241">
+												<!--  content  -->
+												<div class="block__content">2 flex-element</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_342">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_443">
+												<!--  content  -->
+												<div class="block__content">4 flex-element</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Устанавливаем двум flex-элементам начальную ширину в пикселях.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-basis: 200px;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-basis: 400px;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-FlexBasis3" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row25">
+											<!--  flex-element  -->
+											<div class="block__element block__element_244">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_245">
+												<!--  content  -->
+												<div class="block__content">2 flex-element</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_346">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_447">
+												<!--  content  -->
+												<div class="block__content">4 flex-element</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Устанавливаем двум flex-элементам начальную ширину в процентах.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-basis: 30%;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-basis: 60%;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 8 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 8 аккордион конец  -->
+				<!-- 9 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingNine">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+								Свойство flex-grow(Определяет возможность элемента увеличиваться в размере, при
+								необходимости заполняя весь flex-контейнер. 0 запрещено. 1 разрешено. На примере
+								flex-элементов №2 и №4.)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 9 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-FlexGrow" role="tab" aria-controls="nav-FlexGrow"
+										aria-selected="true">Запрещено (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-FlexGrow2" role="tab" aria-controls="nav-FlexGrow2"
+										aria-selected="false">Разрешено</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-FlexGrow" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row26">
+											<!--  flex-element  -->
+											<div class="block__element block__element_248">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_249">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_350">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_451">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать). Flex-элемент не может увеличится.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-grow: 0;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-grow: 0;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-FlexGrow2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row26">
+											<!--  flex-element  -->
+											<div class="block__element block__element_252">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_253">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_354">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_455">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элемент увеличится, заполняя пространство flex-контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-grow: 1;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-grow: 1;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 9 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 9 аккордион конец  -->
+				<!-- 10 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingTen">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen"
+								aria-expanded="true" aria-controls="collapseTen">
+								Свойство flex-shrink(Определяет возможность элемента уменьшаться в размере, при
+								необходимости заполняя весь flex-контейер. 0 запрещено. 1 разрешено. На примере
+								flex-элементов №2 и №4.)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 10 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-FlexShrink" role="tab" aria-controls="nav-FlexShrink"
+										aria-selected="true">Разрешено (по умолчанию)</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-FlexShrink2" role="tab" aria-controls="nav-FlexShrink2"
+										aria-selected="false">Запрещено</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-FlexShrink" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row27">
+											<!--  flex-element  -->
+											<div class="block__element block__element_256">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_257">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_358">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_459">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать). Flex-элемент не может увеличится.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										max-width:400px;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-basis: 200px;<br />
+										flex-shrink: 1;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-basis: 300px;<br />
+										flex-shrink: 1;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-FlexShrink2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row27">
+											<!--  flex-element  -->
+											<div class="block__element block__element_260">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_261">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_362">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_463">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элемент не может увеличится.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										max-width:400px;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex-basis: 200px;<br />
+										flex-shrink: 0;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex-basis: 300px;<br />
+										flex-shrink: 0;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 10 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 10 аккордион конец  -->
+				<!-- 11 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingEleven">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+								Свойство flex. Сокращенная запись для flex-grow, flex-shrink и flex-basis
+								(рекомендуется)(Определяет возможность элемента уменьшаться и увеличиваться в размере,
+								при необходимости заполняя весь flex-контейнер (0 запрещено. 1 разрешено). А так же
+								задаёт базовый размер. На примере flex-элементов №2 и №4.)
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseEleven" class="collapse" aria-labelledby="headingEleven"
+						data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 11 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-Flex" role="tab" aria-controls="nav-Flex" aria-selected="true">По
+										умолчанию</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-Flex2" role="tab" aria-controls="nav-Flex2"
+										aria-selected="false">Пример №1</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-Flex3" role="tab" aria-controls="nav-Flex3"
+										aria-selected="false">Пример №2</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-Flex4" role="tab" aria-controls="nav-Flex4"
+										aria-selected="false">Пример №3</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-Flex" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row28">
+											<!--  flex-element  -->
+											<div class="block__element block__element_264">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_265">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_366">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_467">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Значение по умолчанию (не нужно указывать). Flex-элемент не может увеличиваться,
+										может уменьшаться. Базовый размер автоматический.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex: 0 1 auto;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex: 0 1 auto;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-Flex2" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row28">
+											<!--  flex-element  -->
+											<div class="block__element block__element_268">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_269">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_370">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_471">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элемент может увеличиваться, может уменьшаться. Базовый размер
+										автоматический.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex: 1 1 auto;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex: 1 1 auto;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-Flex3" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row28">
+											<!--  flex-element  -->
+											<div class="block__element block__element_272">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_273">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_374">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_475">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элемент не может увеличиваться, не может уменьшаться. Базовый размер 200px.
+									</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex: 0 0 200px;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex: 0 0 200px;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-Flex4" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<!--  parent -->
+									<div class="block">
+										<!--  flex-container  -->
+										<div class="block__row28">
+											<!--  flex-element  -->
+											<div class="block__element block__element_276">
+												<!--  content  -->
+												<div class="block__content">1</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_277">
+												<!--  content  -->
+												<div class="block__content">2</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_378">
+												<!--  content  -->
+												<div class="block__content">3</div>
+											</div>
+											<!--  flex-element  -->
+											<div class="block__element block__element_479">
+												<!--  content  -->
+												<div class="block__content">4</div>
+											</div>
+										</div>
+									</div>
+									<!--  parent -->
+									<p>Flex-элемент может увеличиваться, не может уменьшаться. Базовый размер 50%.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										/* родитель */<br />
+										.block{<br />
+										}<br />
+										/* flex-контейнер */<br />
+										.block__row{<br />
+										border: 10px solid #ece89d;<br />
+										display: flex;<br />
+										}<br />
+										/* flex-элемент */<br />
+										.block__element{<br />
+										border: 5px solid #5e5373;<br />
+										}<br />
+										/* flex-элемент №1 */<br />
+										.block__element_1{<br />
+										}<br />
+										/* flex-элемент №2 */<br />
+										.block__element_2{<br />
+										flex: 1 0 50%;<br />
+										}<br />
+										/* flex-элемент №3 */<br />
+										.block__element_3{<br />
+										}<br />
+										/* flex-элемент №4 */<br />
+										.block__element_4{<br />
+										flex: 1 0 50%;<br />
+										}<br />
+										/* контент */<br />
+										.block__content{<br />
+										background-color: #18b5a4;<br />
+										/* плюс прочие стили для текста, отступы */<br />
+										}<br />
+									</div>
+								</div>
+							</div>
+							<!-- 11 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 11 аккордион конец  -->
+			</div>
+		</section>
+
+	</main>
+	<footer class="container-fluid footer">
+		<section class="row align-items-end">
+			<div class="col-12">
+				<p class="footer__p">Copyriting 2020-2021 Grizly</p>
+			</div>
+		</section>
+
+	</footer>
+
+	<!-- Скрипты -->
+	<script src="./lib/Jquery/jquery.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/scroll-up.js"></script>
+</body>
+
+</html>
