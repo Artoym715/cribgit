@@ -1,0 +1,791 @@
+<!-- VS-Code Hotkeys
+Сайт шпаргалка 
+Создатель Grizly
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VS-Code Hotkeys</title>
+	<!-- icon -->
+	<link rel="shortcut icon" href="img/grizly.ico" type="image/x-icon">
+	<!-- icon -->
+	<!-- CSS -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS -->
+</head>
+
+<body>
+	<!-- scroll-up  -->
+	<div class="scroll-up d-none d-sm-none d-md-none d-lg-block">
+		<svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+			<path class="scroll-up__svg-path" d="
+			M24,0
+			a24,24 0 0,1 0,48
+			a24,24 0 0,1 0,-48
+			" />
+		</svg>
+	</div>
+	<!-- scroll-up  -->
+	<header class="container-fluid header">
+		<div class="row align-items-start">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<!-- меню -->
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-dark header">
+						<a class="navbar-brand header__logo" href="/">
+							<img src="./img/Grizly3.svg" width="35" height="35" class="d-inline-block align-top"
+								alt="logo" loading="lazy">
+							Grizly
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+							aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav"
+										href="https://grizly715.github.io/Links/" target="blank"><i
+											class="fas fa-link"></i> Полезные ссылки</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- меню -->
+			</div>
+		</div>
+	</header>
+	<main class="container mb-5">
+		<div class="row justify-content-center">
+			<div class="coll-12">
+				<h1 class="section__h1">Горячие клавиши программы VS-Code - Windows.</h1>
+			</div>
+			<div class="coll-12">
+				<img src="/cribgit/img/visual-studio-code.jpg" class="img-fluid mb-2"
+					alt="Горячие клавиши программы VS-Code">
+			</div>
+		</div>
+		<!-- Быстрая навигация по странице -->
+		<section class="row mb-2 d-none d-sm-none d-md-block">
+			<div class="col-md-12 hidden-sm hidden-xs">
+				<div class="dropleft">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Быстрая навигация по странице
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#Common">Общие</a>
+						<a class="dropdown-item" href="#BasicEditing">Основное редактирование</a>
+						<a class="dropdown-item" href="#Navigation">Навигация</a>
+						<a class="dropdown-item" href="#SearchAndReplace">Поиск и замена</a>
+						<a class="dropdown-item" href="#MultiCursorAndSelection">Мульти-курсор и выбор</a>
+						<a class="dropdown-item" href="#EditingLanguages">Редактирование языков</a>
+						<a class="dropdown-item" href="#ManagingTheEditor">Управление редактором</a>
+						<a class="dropdown-item" href="#FileManagement">Управление файлами</a>
+						<a class="dropdown-item" href="#Screen">Экран</a>
+						<a class="dropdown-item" href="#Debug">Отлаживать код (debug)</a>
+						<a class="dropdown-item" href="#BuiltInTerminal">Встроенный терминал</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Быстрая навигация по странице -->
+		<!-- Common section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="Common">Общие</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">P</span><strong>, </strong><span class="hnkey">F1</span>
+								</td>
+								<td>Показать палитру команд</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">P</span></td>
+								<td>Быстрое открытие, переход в файл …</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">N</span></td>
+								<td>Новое окно / экземпляр</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">W</span></td>
+								<td>Закрыть окно / экземпляр</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">,</span></td>
+								<td>Пользовательские настройки</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">K</span><span
+										class="hnkey">CTRL</span><span class="hnkey">S</span></td>
+								<td>Горячие клавиши</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Common section end-->
+		<!-- BasicEditing section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="BasicEditing">Основное редактирование</h2>
+				<table class="table table-hover table-responsive-sm">
+					<tbody>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">X</span></td>
+							<td>Линия разреза (пустой выбор)</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">C</span></td>
+							<td>Копировать строку (пустой выбор)</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Alt</span><span class="hnkey">↑ / ↓</span></td>
+							<td>Перемещение строки вверх / вниз</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span class="hnkey">↓ /
+									↑</span></td>
+							<td>Копирование линии вверх / вниз</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+									class="hnkey">K</span></td>
+							<td>Удалить строку</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">Enter</span></td>
+							<td>Вставить строку ниже</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+									class="hnkey">Enter</span></td>
+							<td>Вставить строку выше</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+									class="hnkey">\</span></td>
+							<td>Перейти к соответствующей скобке</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">CTRL</span><span class="hnkey">] / [</span></td>
+							<td>Отступ / outdent линия</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Home / End</span></td>
+							<td>Перейти к началу / концу строки</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">Home</span></td>
+							<td>Перейти к началу файла</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">End</span></td>
+							<td>Перейти к концу файла</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">↑ / ↓</span></td>
+							<td>Строка прокрутки вверх / вниз</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Alt</span><span class="hnkey">PgUp / PgDn</span></td>
+							<td>Прокрутка страницы вверх / вниз</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+									class="hnkey">[</span></td>
+							<td>Скрыть (свернуть) область</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+									class="hnkey">]</span></td>
+							<td>Развернуть (разворачивать) регион</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">[</span></td>
+							<td>Сложить (свернуть) все субрегионы</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">]</span></td>
+							<td>Развернуть (разворачивать) все субрегионы</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">0</span></td>
+							<td>Свернуть (свернуть) все регионы</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">J</span></td>
+							<td>Развернуть (разворачивать) все регионы</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">C</span></td>
+							<td>Добавить комментарий к строке</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+									class="hnkey">Ctrl</span><span class="hnkey">U</span></td>
+							<td>Удалить комментарий к строке</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">/</span></td>
+							<td>Переключить комментарий к строке</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Ctrl</span><span class="hnkey">Alt</span><span
+									class="hnkey">A</span></td>
+							<td>Переключить комментарий блока</td>
+						</tr>
+						<tr>
+							<td><span class="hnkey">Alt</span><span class="hnkey">Z</span></td>
+							<td>Переключить перенос слов</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- BasicEditing section end-->
+		<!-- Navigation section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="Navigation">Навигация</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">T</span></td>
+								<td>Показать все символы</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">G</span></td>
+								<td>Перейти к строке …</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">P</span></td>
+								<td>Перейти к файлу …</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">O</span></td>
+								<td>Перейдите к символу …</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">M</span></td>
+								<td>Показать панель задач</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F8</span></td>
+								<td>Перейти к следующей ошибке или предупреждению</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">F8</span></td>
+								<td>Перейти к предыдущей ошибке или предупреждению</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">Tab</span></td>
+								<td>Навигация по истории группы редакторов</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Alt</span><span class="hnkey">← / →</span></td>
+								<td>Вернуться назад / вперед</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">M</span></td>
+								<td>Переключить вкладку перемещения фокуса</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Navigation section end-->
+		<!-- Search and Replace section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="SearchAndReplace">Поиск и замена</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">F</span></td>
+								<td>Найти</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">H</span></td>
+								<td>Замещать</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F3 / Shift</span><span class="hnkey">F3</span></td>
+								<td>Найти следующий / предыдущий</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Alt</span><span class="hnkey">Enter</span></td>
+								<td>Выберите все вхождения поиска.</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">D</span></td>
+								<td>Добавить выделение в следующий Найти совпадение</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">D</span></td>
+								<td>Перенести последний выбор на следующий Найти совпадение</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Alt</span><span class="hnkey">C / R / W</span></td>
+								<td>Переключить регистр-регистр / regex / целое слово</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Search and Replace section end-->
+		<!-- Multi-cursor and selection section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="MultiCursorAndSelection">Мульти-курсор и выбор</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">Alt</span><span class="hnkey">Click</span></td>
+								<td>Вставить курсор</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Alt</span><span class="hnkey">↑ /
+										↓</span></td>
+								<td>Вставить курсор сверху / снизу</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">U</span></td>
+								<td>Отменить последнюю операцию курсора</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">I</span></td>
+								<td>Вставить курсор в конце каждой выбранной строки</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">I</span></td>
+								<td>Выберите текущую строку</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">L</span></td>
+								<td>Выбрать все вхождения текущего выбора</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">F2</span></td>
+								<td>Выбрать все вхождения текущего слова</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">→</span></td>
+								<td>Развернуть выбор</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">←</span></td>
+								<td>Выбор термоусадочной пленки</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">(drag mouse)</span></td>
+								<td>Выбор столбца (поле)</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">Alt</span><span class="hnkey">(arrow key)</span></td>
+								<td>Выбор столбца (поле)</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">Alt</span><span class="hnkey">PgUp/PgDn</span></td>
+								<td>Окно выбора столбца (окна) вверх / вниз</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Multi-cursor and selection section end-->
+		<!-- Editing languages section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="EditingLanguages">Редактирование языков</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Space</span></td>
+								<td>Предложение триггера</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">Shift</span><span
+										class="hnkey">Space</span></td>
+								<td>Триггерные подсказки параметров</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">F</span></td>
+								<td>Формат документа</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">F</span></td>
+								<td>Выбор формата</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F12</span></td>
+								<td>Перейти к определению</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Alt</span><span class="hnkey">F12</span></td>
+								<td>Определение Peek</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K F12</span></td>
+								<td>Открыть определение в сторону</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">.</span></td>
+								<td>Быстрая починка</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">F12</span></td>
+								<td>Показать ссылки</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F2</span></td>
+								<td>Переименовать символ</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">X</span></td>
+								<td>Обрезать пробелы</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K M</span></td>
+								<td>Изменить язык файла</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Editing languages section end-->
+		<!-- Managing the editor section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="ManagingTheEditor">Управление редактором</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">F4</span><strong>,</strong><span
+										class="hnkey">Ctrl</span><span class="hnkey">W</span></td>
+								<td>Закрыть редактор</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">K F</span></td>
+								<td>Закрыть папку</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">\</span></td>
+								<td>Редактор разделов</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">1 / 2 / 3</span></td>
+								<td>Сосредоточьтесь на 1-й, 2-й или 3-й группе редакторов</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">←/→</span></td>
+								<td>Фокус в предыдущей / следующей группе редакторов</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">PgUp / PgDn</span></td>
+								<td>Переместить редактор влево / вправо</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K ← / →</span></td>
+								<td>Переместить активную группу редактора</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Managing the editor section end-->
+		<!-- File Management section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="FileManagement">Управление файлами</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">N</span></td>
+								<td>Новый файл</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">CTRL</span><span class="hnkey">O</span></td>
+								<td>Открыть файл…</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">S</span></td>
+								<td>Сохранить</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">S</span></td>
+								<td>Сохранить как…</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K S</span></td>
+								<td>Сохранить все</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">F4</span></td>
+								<td>Закрыть</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">W</span></td>
+								<td>Закрыть все</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">T</span></td>
+								<td>Повторно открыть закрытый редактор</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K Enter</span></td>
+								<td>Сохранить редактор режима предварительного просмотра</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Tab</span></td>
+								<td>Открыть следующий</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">Tab</span></td>
+								<td>Открыть предыдущий</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K P</span></td>
+								<td>Копировать путь к активному файлу</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K R</span></td>
+								<td>Показать активный файл в проводнике</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K O</span></td>
+								<td>Показать активный файл в новом окне / экземпляре</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- File Management section end-->
+		<!-- Screen section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="Screen">Экран</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">F11</span></td>
+								<td>Включить полноэкранный режим</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">Alt</span><span
+										class="hnkey">1</span></td>
+								<td>Переключить макет редактора (горизонтальный / вертикальный)</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">= / –</span></td>
+								<td>Увеличение / уменьшение масштаба</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">E</span></td>
+								<td>Показать проводник / переключить фокус</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">F</span></td>
+								<td>Показать результаты поиска</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">G</span></td>
+								<td>Показать контроль источника</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">D</span></td>
+								<td>Показать отладку</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">X</span></td>
+								<td>Показать расширения</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">H</span></td>
+								<td>Заменить в файлах</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">J</span></td>
+								<td>Переключить сведения о поиске</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">U</span></td>
+								<td>Показать панель вывода</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">V</span></td>
+								<td>Открыть предварительный просмотр Markdown</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K V</span></td>
+								<td>Открыть предварительный просмотр Markdown в сторону</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K Z</span></td>
+								<td>Режим Zen (Esc Esc для выхода)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Screen section end-->
+		<!-- Debug section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="Debug">Отлаживать код (debug)</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">F9</span></td>
+								<td>Переключить точку остановки</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F5</span></td>
+								<td>Пуск / Продолжить</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">F5</span></td>
+								<td>Стоп</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F11 / Shift</span><span class="hnkey">F11</span></td>
+								<td>Ввод / выключение</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">F10</span></td>
+								<td>Переступить</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">K</span><span
+										class="hnkey">Ctrl</span><span class="hnkey">I</span></td>
+								<td>Показать зависание</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Debug section end-->
+		<!-- Built-in terminal section -->
+		<section class="row">
+			<div class="col-md-12">
+				<h2 id="BuiltInTerminal">Встроенный терминал</h2>
+				<div class="d-flex justify-content-center align-items-center">
+					<table class="table table-hover table-responsive-sm">
+						<tbody>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">`</span></td>
+								<td>Показать встроенный терминал</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Shift</span><span
+										class="hnkey">`</span></td>
+								<td>Создать новый терминал</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">C</span></td>
+								<td>Выбор копии</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">V</span></td>
+								<td>Вставить в активный терминал</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">↑ / ↓</span></td>
+								<td>Прокрутка вверх / вниз</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Shift</span><span class="hnkey">PgUp / PgDn</span></td>
+								<td>Прокрутка страницы вверх / вниз</td>
+							</tr>
+							<tr>
+								<td><span class="hnkey">Ctrl</span><span class="hnkey">Home / End</span></td>
+								<td>Прокрутка вверх / вниз</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- Built-in terminal section end-->
+	</main>
+	<footer class="container-fluid footer">
+		<section class="row align-items-end">
+			<div class="col-12">
+				<p class="footer__p">Copyriting 2020-2021 Grizly</p>
+			</div>
+		</section>
+	</footer>
+	<!-- Скрипты -->
+	<script src="./lib/Jquery/jquery.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/scroll-up.js"></script>
+	<script src="lib/fancybox/jquery.fancybox.min.js"></script>
+	<!-- Скрипты -->
+</body>
+
+</html>
