@@ -1,0 +1,1982 @@
+<!-- Grid 
+Сайт шпаргалка 
+Создатель Grizly
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Шпаргалка по Grid</title>
+	<!-- icon -->
+	<link rel="shortcut icon" href="img/grizly.ico" type="image/x-icon">
+	<!-- icon -->
+	<!-- CSS -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS -->
+</head>
+
+<body>
+	<!-- scroll-up  -->
+	<div class="scroll-up d-none d-sm-none d-md-none d-lg-block">
+		<svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+			<path class="scroll-up__svg-path" d="
+			M24,0
+			a24,24 0 0,1 0,48
+			a24,24 0 0,1 0,-48
+			" />
+		</svg>
+	</div>
+	<!-- scroll-up  -->
+	<header class="container-fluid header">
+		<div class="row align-items-start">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<!-- меню -->
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-dark header">
+						<a class="navbar-brand header__logo" href="/">
+							<img src="./img/Grizly3.svg" width="35" height="35" class="d-inline-block align-top" alt="logo"
+								loading="lazy">
+							Grizly
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+							aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="/cribgit/position.html"
+										target="blank"><i class="fas fa-link"></i> Position</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="/cribgit/flexbox.html"
+										target="blank"><i class="fas fa-link"></i>Flexbox</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="/cribgit/grid.html"
+										target="blank"><i class="fas fa-link"></i>Grid</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-item nav-link navactive header__nav" href="https://grizly715.github.io/Links/"
+										target="blank"><i class="fas fa-link"></i> Полезные ссылки</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- меню -->
+			</div>
+		</div>
+	</header>
+	<main class="container mb-5">
+		<section class="row">
+			<div class="col-md-12">
+				<h1 class="header__h1">Шпаргалка по Grid Layout</h1>
+				<h3 class="section__h2">Полезные ссылки</h3>
+				<a href="https://cssgridgarden.com/">Игра-тренажер Grid Garden</a>
+			</div>
+		</section><br />
+		<section class="row">
+			<div class="col-md-12">
+				<h2 class="header__h1">Шпаргалка будет дорабатываться по мере развития технологии.</h2>
+				<!-- Аккордион начало -->
+				<div class="accordion" id="accordionExample">
+					<!-- 1 аккордион -->
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+									aria-expanded="true" aria-controls="collapseOne">
+									<h4>Варианты объявления grid-контейнера</h4>
+									<h5>Свойство display</h5>
+									Контейнер-сетка бывает двух видов: обычный display: grid и встроенный display: inline-grid.
+									Первый генерирует grid-контейнер уровня блока, второй — grid-контейнер уровня строки.
+								</button>
+							</h5>
+						</div>
+
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+							data-parent="#accordionExample">
+							<div class="card-body">
+								<!-- 1 табы -->
+								<nav>
+									<div class="nav nav-tabs" id="nav-tab" role="tablist">
+										<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-static"
+											role="tab" aria-controls="nav-static" aria-selected="true">grid</a>
+										<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-relative"
+											role="tab" aria-controls="nav-relative" aria-selected="false">inline-grid</a>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent">
+									<div class="tab-pane fade show active" id="nav-static" role="tabpanel"
+										aria-labelledby="nav-home-tab">
+										<div class="position overflow-auto">
+											<!-- Область с визуальным результатом -->
+											<div class="block-item-block">
+												<div class="block-item-block__value">
+													<div style="display: grid;" class="grid">
+														<div class="grid__item">1</div>
+														<div class="grid__item">2</div>
+														<div class="grid__item">3</div>
+														<div class="grid__item">4</div>
+														<div class="grid__item">5</div>
+														<div class="grid__item">6</div>
+													</div>
+													<span>Следующий строчный элемент</span>
+												</div>
+											</div>
+											<p>Грид-контейнер определяется как блочный элемент.</p>
+										</div>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											.grid{<br />
+											background-color: #eee;<br />
+											display: grid;<br />
+											}<br />
+											<br />
+											.grid__item{<br />
+											background-color: #5e5373;<br />
+											border: 1px dashed #ece89d;<br />
+											padding: 10px;<br />
+											color: #fff;<br />
+											font-size: 20px;<br />
+											font-weight: 700;<br />
+											}
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-relative" role="tabpanel"
+										aria-labelledby="nav-relative-tab">
+										<div class="position2 overflow-auto">
+											<!-- Область с визуальным результатом -->
+											<div class="block-item-block">
+												<div class="block-item-block__value">
+													<div style="display: inline-grid;" class="grid">
+														<div class="grid__item">1</div>
+														<div class="grid__item">2</div>
+														<div class="grid__item">3</div>
+														<div class="grid__item">4</div>
+														<div class="grid__item">5</div>
+														<div class="grid__item">6</div>
+													</div>
+													<span>Следующий строчный элемент</span>
+												</div>
+											</div>
+										</div>
+										<p>Грид-контейнер определяется как блочно-строчный элемент.</p>
+										<h3>CSS код:</h3>
+										<div class="alert alert-warning" role="alert">
+											.grid{<br />
+											background-color: #eee;<br />
+											display: inline-grid;<br />
+											}<br />
+											<br />
+											.grid__item{<br />
+											background-color: #5e5373;<br />
+											border: 1px dashed #ece89d;<br />
+											padding: 10px;<br />
+											color: #fff;<br />
+											font-size: 20px;<br />
+											font-weight: 700;<br />
+											}
+										</div>
+									</div>
+								</div>
+								<!-- 1 табы конец -->
+							</div>
+						</div>
+					</div>
+					<!-- 1 аккордион конец -->
+				</div>
+				<!-- Аккордион конец -->
+				<!-- 2 аккордион -->
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<h4>Определение явной сетки</h4>
+								<h5>Свойства: grid-template-rows, grid-template-columns, grid-template, grid-template-areas</h5>
+								Количество строк / столбцов определяется с помощью свойств grid-template-rows и
+								grid-template-columns. Свойства не наследуются.<br />
+								Каждый идентификатор сетки в значении grid-template-areas соответствует ячейке сетки. Как только
+								все ячейки идентифицированы, браузер объединяет все смежные ячейки с одинаковыми именами в одну
+								область, которая охватывает все их, при условии, что они описывают область прямоугольной формы.
+								Если вы попытаетесь настроить более сложные области, весь шаблон будет недействительным и
+								области сетки не будут определены.
+							</button>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 2 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-gridfr"
+										role="tab" aria-controls="nav-gridfr" aria-selected="true">единица
+										fr</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridprof"
+										role="tab" aria-controls="nav-gridprof" aria-selected="false">проценты</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridminmax"
+										role="tab" aria-controls="nav-gridminmax" aria-selected="false">minmax</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-gridauto"
+										role="tab" aria-controls="nav-gridauto" aria-selected="true">auto</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridrepeat"
+										role="tab" aria-controls="nav-gridrepeat" aria-selected="false">repeat</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridautofill"
+										role="tab" aria-controls="nav-gridautofill" aria-selected="false">repeat + auto-fill
+										+ minmax</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-gridautofit"
+										role="tab" aria-controls="nav-gridautofit" aria-selected="true">repeat + auto-fit
+										+ minmax</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridareas"
+										role="tab" aria-controls="nav-gridareas" aria-selected="false">areas</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridfr" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template: 1fr 1fr / 1fr 1fr 1fr;" class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>fr — единица длины, которая позволяет создавать гибкие дорожки. Не является единицей
+										измерения в обычном ее понимании, поэтому не может быть представлена или объединена с
+										другими типами единиц в выражениях calc(). Общий размер фиксированных строк или столбцов
+										вычитается из доступного пространства контейнера-сетки. Оставшееся пространство делится
+										между строками и столбцами с гибкими размерами пропорционально их коэффициенту.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: 1fr 1fr 1fr;<br />
+										grid-template-rows: 1fr 1fr;<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr 1fr / 1fr 1fr 1fr;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridprof" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template: 80% 120% / 20% 30% 20%;" class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Размеры в % вычисляются от ширины или высоты контейнера-сетки.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: 20% 30% 20%;;<br />
+										grid-template-rows: 80% 120%;;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 80% 120% / 20% 30% 20%;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridminmax" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template: minmax(100px,110%) minmax(50px,1fr) / minmax(200px,300px) minmax(100px,200px) minmax(250px,150px);"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Функция minmax(min,max) определяет диапазон размеров, больше или равный min и меньше или
+										равный max. Если max < min, то max игнорируется, а minmax(min,max) обрабатывается как min.
+											Значения в fr можно устанавливать только как максимальное.</p>
+											<h3>CSS код:</h3>
+											<div class="alert alert-warning" role="alert">
+												.grid{<br />
+												background-color: #eee;<br />
+												display: grid;<br />
+												grid-template-columns: minmax(200px,300px) minmax(100px,200px)
+												minmax(250px,150px);<br />
+												grid-template-rows: minmax(100px,110%) minmax(50px,1fr);<br />
+												}
+											</div>
+											<h3>Или:</h3>
+											<div class="alert alert-warning" role="alert">
+												.grid{<br />
+												background-color: #eee;<br />
+												display: grid;<br />
+												grid-template: minmax(100px,110%) minmax(50px,1fr) / minmax(200px,300px)
+												minmax(100px,200px) minmax(250px,150px);<br />
+												}<br />
+												<br />
+												.grid__item{<br />
+												background-color: #5e5373;<br />
+												border: 1px dashed #ece89d;<br />
+												padding: 10px;<br />
+												color: #fff;<br />
+												font-size: 20px;<br />
+												font-weight: 700;<br />
+												}
+											</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridauto" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template: auto 1fr / auto 1fr auto;" class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Значение auto ориентируется на содержимое элементов сетки одной дорожки. Как минимум,
+										рассматривается как минимальный размер элемента сетки, как определено min-width или
+										min-height. Как максимум, обрабатывается так же, как и max-content. Может растягиваться за
+										счет свойств align-content и justify-content.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: auto 1fr auto;<br />
+										grid-template-rows: auto 1fr;<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: auto 1fr / auto 1fr auto;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridrepeat" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template: repeat(2,1fr) / repeat(3,1fr);"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Нотация repeat() представляет повторяющийся фрагмент списка дорожек, что позволяет
+										записать в более компактной форме большое количество одинаковых по размерам столбцов или
+										строк.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: repeat(3,1fr);<br />
+										grid-template-rows: repeat(2,1fr);<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,1fr) / repeat(3,1fr);<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautofill" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template: auto / repeat(auto-fill,minmax(150px, 1fr));"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Используя значение auto-fill, вы всегда получите хотя бы один столбец, даже если он по
+										какой-то причине не помещается в контейнер-сетку.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: auto / repeat(auto-fill,minmax(150px, 1fr));<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautofit" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template: auto / repeat(auto-fit,minmax(150px, 1fr));"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Если вы используете auto-fit, то дорожки, которые не содержат элементы сетки, будут
+										сброшены.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: auto / repeat(auto-fit,minmax(150px, 1fr));<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridareas" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid;grid-template-columns: 150px 1fr;grid-template-areas: 'header header' 'sidebar content' 'block-1 block-2' 'footer footer'"
+													class="grid">
+													<div style="grid-area: header" class="grid__item">1</div>
+													<div style="grid-area: sidebar" class="grid__item">2</div>
+													<div style="grid-area: content" class="grid__item">3</div>
+													<div style="grid-area: block-1" class="grid__item">4</div>
+													<div style="grid-area: block-2" class="grid__item">5</div>
+													<div style="grid-area: footer" class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Свойство grid-template-areas определяет именованные области сетки, которые не связаны с
+										каким-либо конкретным элементом сетки, но на которые можно ссылаться из свойств размещения
+										сетки. Синтаксис свойства обеспечивает визуализацию структуры сетки, облегчая понимание
+										общего макета контейнера-сетки. Свойство не наследуется.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template-columns: 150px 1fr;<br />
+										grid-template-areas: 'header header' 'sidebar content' 'block-1 block-2' 'footer
+										footer';<br />
+										}
+									</div>
+									<h3>Или:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: auto / 150px 1fr;<br />
+										grid-template-areas: 'header header' 'sidebar content' 'block-1 block-2' 'footer
+										footer';<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}<br />
+										.grid__item:nth-child(1){<br />
+
+										grid-area: header;<br />
+										}<br />
+
+										.grid__item:nth-child(2){<br />
+
+										grid-area: sidebar;<br />
+										}<br />
+
+										.grid__item:nth-child(3){<br />
+
+										grid-area: content;<br />
+										}<br />
+
+										.grid__item:nth-child(4){<br />
+
+										grid-area: block-1;<br />
+										}<br />
+
+										.grid__item:nth-child(5){<br />
+
+										grid-area: block-2;<br />
+										}<br />
+										.grid__item:nth-child(6){<br />
+
+										grid-area: footer;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 2 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 2 аккордион конец -->
+				<!-- 3 аккордион -->
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+								data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<h4>Определение неявной сетки</h4>
+								<h5>Свойства: grid-auto-columns, grid-auto-rows, grid-auto-flow</h5>
+								Если элемент сетки расположен в строке или столбце, размер которых не определен явно
+								grid-template-rows или grid-template-columns, создаются неявные дорожки сетки для его хранения.
+								Это может произойти в случае, если строка или столбец оказались за пределами установленных
+								размеров сетки.<br />
+								Элементы сетки, которые не размещены явно, автоматически помещаются в незанятое пространство в
+								контейнере-сетке с помощью алгоритма автоматического размещения. Свойство grid-auto-flow
+								управляет автоматическим размещением элементов сетки без явного положения. После заполнения
+								явной сетки (или если явной сетки нет) автоматическое размещение также приведет к генерации
+								неявных дорожек сетки. Свойство не наследуется.
+							</button>
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 3 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-gridautocol" role="tab" aria-controls="nav-gridfr"
+										aria-selected="true">grid-auto-columns<br />
+										+ grid-auto-flow
+									</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridautorow"
+										role="tab" aria-controls="nav-gridprof" aria-selected="false">grid-auto-rows</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridautoflow"
+										role="tab" aria-controls="nav-gridminmax" aria-selected="false">grid-auto-flow
+										row</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-gridautoflowcol"
+										role="tab" aria-controls="nav-gridauto" aria-selected="true">grid-auto-flow
+										column</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-gridautoflowden" role="tab" aria-controls="nav-gridrepeat"
+										aria-selected="false">grid-auto-flow
+										dense</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridautocol" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:1fr / repeat(3,200px);grid-auto-columns: 50px;grid-auto-flow:column;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>По умолчанию эти автоматически добавляемые дорожки имеют минимальный необходимый размер.
+										Свойства grid-auto-rows и grid-auto-columns позволяют контролировать размер неявных
+										дорожек сетки. Если дано несколько размеров дорожек, шаблон повторяется по мере
+										необходимости, чтобы найти размер неявных дорожек. Первая неявная дорожка сетки после
+										явной сетки получает первый заданный размер и так далее. Свойства не наследуются.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr / repeat(3,200px);<br />
+										grid-auto-columns: 50px;<br />
+										grid-auto-flow:column;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautorow" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:1fr / repeat(3,200px);grid-auto-rows: 100px;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>По умолчанию эти автоматически добавляемые дорожки имеют минимальный необходимый размер.
+										Свойства grid-auto-rows и grid-auto-columns позволяют контролировать размер неявных
+										дорожек сетки. Если дано несколько размеров дорожек, шаблон повторяется по мере
+										необходимости, чтобы найти размер неявных дорожек. Первая неявная дорожка сетки после
+										явной сетки получает первый заданный размер и так далее. Свойства не наследуются.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr / repeat(3,200px);<br />
+										grid-auto-rows: 100px;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautoflow" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template:1fr / repeat(3,200px);grid-auto-flow: row;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Алгоритм автоматического размещения размещает элементы, заполняя каждую строку по очереди
+										слева-направо (для LTR-языков), добавляя новые строки по мере необходимости. Значение по
+										умолчанию.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr / repeat(3,200px);<br />
+										grid-auto-flow: row;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautoflowcol" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:1fr 1fr / repeat(3,200px);grid-auto-flow: column;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Алгоритм размещает элементы, заполняя каждый столбец по очереди сверху-вниз, добавляя
+										новые столбцы по мере необходимости.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr 1fr / repeat(3,200px);<br />
+										grid-auto-flow: column;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridautoflowden" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:1fr 1fr / repeat(3,200px);grid-auto-flow: dense;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Алгоритм "плотной" укладки элементов. При необходимости может менять порядок следования
+										элементов, заполняя пустые места более крупными элементами.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: 1fr 1fr / repeat(3,200px);<br />
+										grid-auto-flow: dense;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 3 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 3 аккордион конец -->
+
+				<!-- 4 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour"
+								aria-expanded="true" aria-controls="collapseFour">
+								<h4>Выравнивание содержимого вдоль горизонтальной оси</h4>
+								<h5>Свойство: justify-items</h5>
+								Выравнивает содержимое вдоль оси строки (в отличии от align-items который выравнивает элементы
+								вдоль вертикальной оси). Это значение применяется ко всем элементам сетки внутри контейнера.
+								Свойство не наследуются.
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 4 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-gridstretch" role="tab" aria-controls="nav-gridstretch"
+										aria-selected="true">stretch
+										по умолчанию</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridstart"
+										role="tab" aria-controls="nav-gridstart" aria-selected="false">start</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridend"
+										role="tab" aria-controls="nav-gridend" aria-selected="false">end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridcenter"
+										role="tab" aria-controls="nav-gridcenter" aria-selected="false">center</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridstretch" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Заполняет всю ширину области (по умолчанию).</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										justify-items: stretch;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridstart" role="tabpanel" aria-labelledby="nav-profile-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);justify-items: start;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по левой стороне области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										justify-items: start;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridend" role="tabpanel" aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);justify-items: end;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по правой стороне области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										justify-items: end;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridcenter" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);justify-items: center;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по центру области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										justify-items: center;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 4 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 4 аккордион конец -->
+				<!-- 5 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingFive">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
+								aria-expanded="true" aria-controls="collapseFive">
+								<h4>Выравнивание содержимого вдоль вертикальной оси</h4>
+								<h5>Свойство: align-items</h5>
+								Выравнивает содержимое вдоль вертикальной оси (в отличии от justify-items который выравнивает
+								элементы вдоль горизонтальной оси). Это значение применяется ко всем элементам сетки внутри
+								контейнера. Свойство не наследуются.
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 5 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+										href="#nav-gridalignstretch" role="tab" aria-controls="nav-gridalignstretch"
+										aria-selected="true">stretch
+										по умолчанию</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-gridalignstart" role="tab" aria-controls="nav-gridstart"
+										aria-selected="false">start</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridalignend"
+										role="tab" aria-controls="nav-gridend" aria-selected="false">end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridaligncenter" role="tab" aria-controls="nav-gridcenter"
+										aria-selected="false">center</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridalignstretch" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Заполняет всю ширину области (по умолчанию).</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										align-items: stretch;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignstart" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);align-items: start;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по верхней стороне области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										align-items: start;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignend" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);align-items: end;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по нижней стороне области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										align-items: end;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridaligncenter" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; grid-template:repeat(2,100px) / repeat(3,1fr);align-items: center;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по центру области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										grid-template: repeat(2,100px) / repeat(3,1fr);<br />
+										align-items: center;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 5 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 5 аккордион конец -->
+
+				<!-- 6 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingSix">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix"
+								aria-expanded="true" aria-controls="collapseSix">
+								<h4>Выравнивание сетки вдоль горизонтальной оси</h4>
+								<h5>Свойство: justify-content</h5>
+								Выравнивает сетку вдоль горизонтальной оси (в отличии от align-content который выравнивает сетку
+								вдоль вертикальной оси). Свойство не наследуются.
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 6 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-gridjuststart" role="tab" aria-controls="nav-gridjuststart"
+										aria-selected="false">start по умолчанию</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridjustend"
+										role="tab" aria-controls="nav-gridend" aria-selected="false">end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridjustcenter" role="tab" aria-controls="nav-gridjustcenter"
+										aria-selected="false">center</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-gridjuststretch"
+										role="tab" aria-controls="nav-gridjuststretch" aria-selected="true">stretch
+									</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-gridjustspar"
+										role="tab" aria-controls="nav-gridjustspar" aria-selected="false">space-around</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridjustspab"
+										role="tab" aria-controls="nav-gridend" aria-selected="false">space-between</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-gridjustspae"
+										role="tab" aria-controls="nav-gridjustspae" aria-selected="false">space-evenly</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridjuststart" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: start;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает содержимое по верхней стороне области.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: start;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjustend" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: end;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает сетку по правой стороне контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: end;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjustcenter" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: center;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает сетку по центру контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: center;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjuststretch" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: stretch;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Масштабирует элементы чтобы сетка могла заполнить всю ширину контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: stretch;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjustspar" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: space-around;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, и полуразмерные отступы по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: space-around;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjustspab" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: space-between;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, без отступов по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: space-between;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridjustspae" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);justify-content: space-evenly;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, и полноразмерные отступы по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										justify-content: space-evenly;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 6 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 6 аккордион конец  -->
+				<!-- 7 аккордион  -->
+				<div class="card">
+					<div class="card-header" id="headingEight">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight"
+								aria-expanded="true" aria-controls="collapseEight">
+								<h4>Выравнивание сетки вдоль вертикальной оси</h4>
+								<h5>Свойство: align-content</h5>
+								Выравнивает сетку вдоль вертикальной оси (в отличии от justify-content которое выравнивает сетку
+								вдоль горизонтальной оси). Свойство не наследуются.
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+						<div class="card-body">
+							<!-- 7 табы -->
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-gridalignconstart" role="tab" aria-controls="nav-gridalignconstart"
+										aria-selected="false">start по умолчанию</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridalignconend" role="tab" aria-controls="nav-gridend"
+										aria-selected="false">end</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridalignconcenter" role="tab" aria-controls="nav-gridalignconcenter"
+										aria-selected="false">center</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab"
+										href="#nav-gridaligncontretch" role="tab" aria-controls="nav-gridjuststretch"
+										aria-selected="true">stretch
+									</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+										href="#nav-gridalignconspar" role="tab" aria-controls="nav-gridjustspar"
+										aria-selected="false">space-around</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridalignconspab" role="tab" aria-controls="nav-gridend"
+										aria-selected="false">space-between</a>
+									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+										href="#nav-gridalignconspae" role="tab" aria-controls="nav-gridjustspae"
+										aria-selected="false">space-evenly</a>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-gridalignconstart" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: start;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает сетку по верхней стороне контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: start;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignconend" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: end;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает сетку по нижней стороне контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: end;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignconcenter" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: center;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Выравнивает сетку по центру контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: center;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridaligncontretch" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: stretch;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Масштабирует элементы чтобы сетка могла заполнить всю ширину контейнера.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: stretch;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignconspar" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: space-around;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, и полуразмерные отступы по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: space-around;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignconspab" role="tabpanel">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: space-between;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, без отступов по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: space-between;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-gridalignconspae" role="tabpanel"
+									aria-labelledby="nav-contact-tab">
+									<div class="position overflow-auto">
+										<!-- Область с визуальным результатом -->
+										<div class="block-item-block">
+											<div class="block-item-block__value">
+												<div
+													style="display: grid; height: 300px; grid-template:repeat(2,100px) / repeat(3,200px);align-content: space-evenly;"
+													class="grid">
+													<div class="grid__item">1</div>
+													<div class="grid__item">2</div>
+													<div class="grid__item">3</div>
+													<div class="grid__item">4</div>
+													<div class="grid__item">5</div>
+													<div class="grid__item">6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Одинаковое пространство между элементами, и полноразмерные отступы по краям.</p>
+									<h3>CSS код:</h3>
+									<div class="alert alert-warning" role="alert">
+										.grid{<br />
+										background-color: #eee;<br />
+										display: grid;<br />
+										height: 300px;<br />
+										grid-template: repeat(2,100px) / repeat(3,200px);<br />
+										align-content: space-evenly;<br />
+										}<br />
+										<br />
+										.grid__item{<br />
+										background-color: #5e5373;<br />
+										border: 1px dashed #ece89d;<br />
+										padding: 10px;<br />
+										color: #fff;<br />
+										font-size: 20px;<br />
+										font-weight: 700;<br />
+										}
+									</div>
+								</div>
+							</div>
+							<!-- 7 табы конец -->
+						</div>
+					</div>
+				</div>
+				<!-- 7 аккордион конец  -->
+
+			</div>
+		</section>
+
+	</main>
+	<footer class="container-fluid footer">
+		<section class="row align-items-end">
+			<div class="col-12">
+				<p class="footer__p">Copyriting 2020-2021 Grizly</p>
+			</div>
+		</section>
+
+	</footer>
+
+	<!-- Скрипты -->
+	<script src="./lib/Jquery/jquery.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/scroll-up.js"></script>
+</body>
+
+</html>
